@@ -5,7 +5,16 @@
 #include <SDL2/SDL_render.h>
 
 typedef struct {
+	int x;
+	int y;
+	int r;
+	int g;
+	int b;
+} RenderPoint;
+
+typedef struct {
 	SDL_Renderer *renderer;
+	RenderPoint *buffer;
 	int startY;
 	int endY;
 	double centerX;
